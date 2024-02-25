@@ -19,7 +19,7 @@ https://youtu.be/3UN1ZNvqEt8?si=tAbr0KJ1D1S3iKwG
 `<mysql -u root -p>`
 
 ### Hasil
-![query|500](query.png)
+![query](aset/query.png)
 ### Analisis
 - `<mySQL>` Salah satu aplikasi database server dengan bahasa pemrograman structured query languange `(SQL)` yang berfungsi untuk mengelola data secara terstruktur dan sistematis.
 - `<-u root>` Bagian ini mengeset pengguna (user) yang akan digunakan saat terhubung ke server  MYSQL. Dalam contoh ini, pengguna yang digunakan adalah `"root"`. Pengguna `"root"` biasanya memiliki hak akses penuh ke server MYSQL dan dapat melakukan tindakan administratif.
@@ -40,7 +40,7 @@ create databases [nama_tabel];
 create databases XI_RPL_1;
 ```
 ### Hasil 
-![create|500](aset/create.png)
+![create](aset/create.png)
 ### Analisis 
 - `CREATE DATABASE` adalah perintah untuk membuat database baru.
 - `XI_RPL_1` adalah nama yang Anda pilih untuk database baru Anda. Tanda kurung siku `<("[]")>` digunakan di sini untuk menghindari kesalahan jika nama database mengandung karakter spesial atau spasi. Namun, perlu dicatat bahwa tidak semua DBMS mengizinkan penggunaan tanda kurung siku dalam nama database, jadi pastikan untuk menyesuaikan sintaksdengan DBMS yang Anda gunakan.
@@ -57,7 +57,7 @@ show [nama_databases];
 show databases;
 ```
 ### Hasil 
-![show|400](aset/show.png)
+![show](aset/show.png)
 ### Analisis 
 `SHOW DATABASE` digunakan untuk menampilkan daftar database yang ada dalam sistem manejemen basis data (DBMS). Perintah ini dapat digunakan di beberapa DBMS seperti MYSQL, PostgreSQL, dan beberapa DBMS lainnya. Namun, perintahnya dapat sedikit berbeda tergantung.
 ### Kesimpulan
@@ -72,7 +72,7 @@ drop database [nama_dataasbe]
 drop database xi_rpl_1;
 ```
 ### Hasil :
-![drop|500](aset/drop.png)
+![drop](aset/drop.png)
 ### Analisis 
 `<DROP DATABASE [nama_database]>` digunakan dalam sistem manajemen basis data (DBMS) untuk menghapus sebuah database beserta semua objek yang terkait dengan database tersebut, seperti tabel, indeks, tampilan, prosedur tersimpan, dan lain-lain.
 ### Kesimpulan
@@ -87,7 +87,7 @@ use [nama_database]
 use xi_rpl_1;
 ```
 ### Hasil :
-![use|500](aset/use.png)
+![use](aset/use.png)
 ### Analisis 
 `USE [nama_database]` digunakan dalam sistem manajemen basis data (DBMS) untuk beralih atau memilih database yang akan digunakan. Ketika Anda menggunakan perintah `<USE>` diikuti dengan nama database, DBMS akan mengarahkan semua perintah dan operasi selanjutnya pada database yang ditentukan.
 ### Kesimpulan
@@ -125,7 +125,7 @@ plat_mobil char(18) not null unique,
 warna_mobil varchar(18) not null unique);
 ```
 ### Hasil
-![describe|500](aset/describe.png)
+![describe](aset/describe.png)
 ### Analisis
 1. `nama_mobil varchar(15) primary key not null`: Ini adalah kolom dengan nama "nama_mobil" yang memiliki tipe data VARCHAR dengan panjang maksimum 15 karakter. Primary key menandakan bahwa kolom ini akan berfungsi sebagai kunci utama untuk mengidentifikasi setiap baris dalam tabel. "Not null" menunjukkan bahwa kolom tidak boleh memiliki nilai null, yang berarti setiap baris harus memiliki nilai yang valid untuk kolom ini.
 2. `plat_mobil chat(18) not null unique`: Ada beberapa kesalahan ketik dalam definisi kolom ini. Saya berasumsi bahwa maksud Anda adalah `plat_mobil char(18) not null unique`. Kolom ini memiliki nama "plat_mobil" dan menggunakan tipe data CHAR dengan panjang tetap 18 karakter. "Not null" menunjukkan bahwa kolom ini tidak boleh memiliki nilai null. "Unique" menandakan bahwa setiap nilai dalam kolom harus unik, artinya tidak ada dua baris dalam tabel yang memiliki nilai yang sama untuk kolom ini.
@@ -148,7 +148,8 @@ desc [nama_table];
 desc pelanggan;
 ```
 ### Hasil
-![[desc|500](aset/desc.png)
+![[desc](aset/desc.png)
+
 ### Analisis
 `desc pelanggan;`: dapat melihat secara detail karakteristik dari setiap kolom dalam tabel tersebut, termasuk nama kolom, tipe data, panjang maksimum (jika berlaku), dan konstrain khusus seperti PRIMARY KEY, UNIQUE, atau NOT NULL yang diterapkan pada setiap kolom.
 ### Kesimpulan
@@ -164,7 +165,7 @@ show tables;
 show tables;
 ```
 ### Hasil
-![[shows|500](aset/shows.png)
+![[shows](aset/shows.png)
 ### Analisis
 `show tables;`: untuk menampilkan semua tabel yang ada dalam database yang sedang aktif.
 ### Kesimpulan
@@ -203,7 +204,7 @@ INSERT INTO pelanggan
 values (1, "mada", "jeno", "082195305736");
 ```
 ### Hasil
-![insert|500](aset/insert.png)
+![insert](aset/insert.png)
 ### Analisis
 1. Kolom pertama: mungkin merupakan kolom ID pelanggan dengan tipe data numerik.
 2. Kolom kedua: mungkin merupakan kolom nama dengan tipe data teks.
@@ -230,7 +231,7 @@ values (5, "mada", "jeno", '0835515796087'),
 (3, "gusion", "yusin", '08646903215');
 ```
 ### Hasil
-![[foto|500](aset/foto.png)
+![[foto](aset/foto.png)
 ### Analisis
 - `INSERT INTO pelanggan`: Menentukan bahwa Anda ingin memasukkan data ke dalam tabel "pelanggan".
 - `VALUES`: Menunjukkan bahwa Anda memberikan nilai untuk dimasukkan ke dalam kolom yang ditentukan.
@@ -251,7 +252,7 @@ select * from [nama_tabel];
 select * from pelanggan;
 ```
 ### Hasil
-![[pelanggan|500](aset/pelanggan.png)
+![[pelanggan](aset/pelanggan.png)
 ### Analisis
 Kueri SQL "SELECT * FROM pelanggan;" adalah query sederhana yang digunakan untuk mengambil semua kolom dan record dari tabel bernama "pelanggan" dalam database. Izinkan saya menguraikan pertanyaannya untuk Anda:
 - `SELECT *` : digunakan untuk memilih semua kolom dari tabel yang ditentukan. 
@@ -269,7 +270,7 @@ from [nama_tabel],
 select nama_depan from pelanggan;
 ```
 ### Hasil
-![[tabel|500](aset/tabel.png)
+![[tabel](aset/tabel.png)
 ### Analisis
 - `Select` merupakan query yang digunakan untuk menampilkan hasil `insert`
 - `nama_depan` nama kolom dalam tabel database yang mungkin menyimpan informasi tentang nama depan dari pelanggan.
@@ -289,7 +290,7 @@ select nama_depan from pelanggan
 where id =2;
 ```
 ### Hasil
-![[where|500](aset/where.png)
+![[where](aset/where.png)
 ### Analisis
  - `Select` merupakan query yang digunakan untuk menampilkan hasil `insert`
 - `id_pelanggan,nama_depan` nama kolom dalam tabel database yang mungkin menyimpan informasi tentang nama depan dari pelanggan.
@@ -309,7 +310,7 @@ mysql> UPDATE nama_tabel SET nama_kolom WHERE kondisi;
  UPDATE pelanggan SET no_telp="085358639358" WHERE id_pelanggan="1";
 ```
 ## Hasil
-![[select|500](aset/select.png)
+![[select](aset/select.png)
 ## Analisis
 - `UPDATE pelanggan`: Ini adalah klausa yang menentukan tabel mana yang akan diperbarui. Dalam kasus ini, tabel yang diperbarui adalah "pelanggan".
 - `SET no_telp="085358639358"`: Ini adalah klausa yang menentukan kolom mana yang akan diperbarui dan nilai baru yang akan diberikan. Dalam hal ini, kolom yang diperbarui adalah "no_telp" dan nilainya diubah menjadi "085358639358".
@@ -326,7 +327,7 @@ DELETE FROM nama_tabel WHERE kondisi;
 DELETE FROM pelanggan WHERE id_pelanggan="2";
 ```
 ## Hasil
-![[delete|500](aset/delete.png)
+![[delete](aset/delete.png)
 ## Analisis
 - `DELETE FROM pelanggan`: Ini adalah klausa yang menentukan tabel mana yang akan dihapus datanya. Dalam kasus ini, data akan dihapus dari tabel "pelanggan".
 - `WHERE id_pelanggan="2"`: Ini adalah klausa opsional yang digunakan untuk membatasi baris mana yang akan dihapus. Dalam hal ini, baris dengan nilai "id_pelanggan" yang sama dengan "2" akan dihapus.
@@ -342,7 +343,7 @@ drop table [nama_tabel]
 drop table mobil;
 ```
 ## Hasil
-![[drops|500](aset/drops.png)
+![[drops](aset/drops.png)
 ## Analisis
 - `"DROP TABLE"` : Ini adalah perintah SQL yang digunakan untuk menghapus sebuah tabel dari basis data.
 - `"mobil"` : Ini adalah nama tabel yang ingin Anda hapus. Dalam kasus ini, tabel yang bernama "mobil" akan dihapus.
